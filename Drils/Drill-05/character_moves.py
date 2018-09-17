@@ -269,14 +269,14 @@ def move_point10():
 move_point1()
 
 while True:
-    move_point2()
-    move_point3()
-    move_point4()
-    move_point5()
-    move_point6()
-    move_point7()
-    move_point8()
-    move_point9()
-    move_point10()
+    move_run_point2()
+    move_run_point3()
+    move_run_point4()
+    move_run_point5()
+    move_run_point6()
+    move_run_point7()
+    move_run_point8()
+    move_run_point9()
+    move_run_point10()
 
 close_canvas()
