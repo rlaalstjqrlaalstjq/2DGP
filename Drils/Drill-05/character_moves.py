@@ -6,7 +6,7 @@ grass = load_image('grass.png')
 character = load_image('animation_sheet.png')
 
 
-def move_point1():
+def move_run_point1():
     x, y = 0, 0
     frame = 0
     while x < 203:
@@ -32,7 +32,7 @@ def move_point1():
         get_events()
 
 
-def move_point2():
+def move_run_point2():
     x, y = 203, 535
     frame = 0
     while x > 132:
@@ -58,7 +58,7 @@ def move_point2():
         get_events()
 
 
-def move_point3():
+def move_run_point3():
     x, y = 132, 243
     frame = 0
     while x < 535:
@@ -84,7 +84,7 @@ def move_point3():
         get_events()
 
 
-def move_point4():
+def move_run_point4():
     x, y = 535, 470
     frame = 0
     while x > 477:
@@ -110,7 +110,7 @@ def move_point4():
         get_events()
 
 
-def move_point5():
+def move_run_point5():
     x, y = 477, 203;
     frame = 0
     while x < 715:
@@ -136,7 +136,7 @@ def move_point5():
         get_events()
 
 
-def move_point6():
+def move_run_point6():
     x, y = 715, 136
     frame = 0
     while x > 316:
@@ -162,7 +162,7 @@ def move_point6():
         get_events()
 
 
-def move_point7():
+def move_run_point7():
     x, y = 316, 225;
     frame = 0
     while x < 510:
@@ -188,7 +188,7 @@ def move_point7():
         get_events()
 
 
-def move_point8():
+def move_run_point8():
     x, y = 510, 92
     frame = 0
     while x < 692:
@@ -214,7 +214,7 @@ def move_point8():
         get_events()
 
 
-def move_point9():
+def move_run_point9():
     x, y = 692, 518
     frame = 0
     while x > 682:
@@ -240,7 +240,7 @@ def move_point9():
         get_events()
 
 
-def move_point10():
+def move_run_point10():
     x, y = 682, 336
     frame = 0
     while x < 712:
@@ -266,7 +266,7 @@ def move_point10():
         get_events()
 
 
-move_point1()
+move_run_point1()
 
 while True:
     move_run_point2()
