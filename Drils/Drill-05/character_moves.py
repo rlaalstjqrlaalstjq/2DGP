@@ -7,7 +7,29 @@ character = load_image('animation_sheet.png')
 
 
 def move_point1():
-    pass
+    x, y = 0, 0
+    frame = 0
+    while x < 203:
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frame * 100, 100, 100, 100, x, 90)
+
+        update_canvas()
+        frame = (frame + 1) % 8
+        x += 5
+        delay(0.02)
+        get_events()
+
+    while y < 535:
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frame * 100, 100, 100, 100, x, y)
+
+        update_canvas()
+        frame = (frame + 1) % 8
+        y += 5
+        delay(0.02)
+        get_events()
 
 
 def move_point2():
