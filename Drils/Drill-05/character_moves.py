@@ -85,7 +85,29 @@ def move_point3():
 
 
 def move_point4():
-    pass
+    x, y = 535, 470
+    frame = 0
+    while x > 477:
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frame * 100, 0, 100, 100, x, y)
+
+        update_canvas()
+        frame = (frame + 1) % 8
+        x -= 5
+        delay(0.02)
+        get_events()
+
+    while y > 203:
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frame * 100, 0, 100, 100, x, y)
+
+        update_canvas()
+        frame = (frame + 1) % 8
+        y -= 5
+        delay(0.02)
+        get_events()
 
 
 def move_point5():
@@ -115,7 +137,7 @@ def move_point10():
 while True:
     #move_point1()
     #move_point2()
-    move_point3()
+    #move_point3()
     move_point4()
     move_point5()
     move_point6()
