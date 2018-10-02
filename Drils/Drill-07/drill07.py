@@ -35,15 +35,18 @@ def draw(x,y):
 
 
 size = 20
-points = [(random.randint(100,200)) for n in  range(size)]  #20개 랜덤값 생성
-
-
+x_points = [(random.randint(0,1000)) for n in  range(size)]  #20개 랜덤값 생성
+y_points = [(random.randint(0,1000)) for n in  range(size)]
+r=0
 while True:
     for i in range(0, 100 + 1, 2):
         t = i / 100
-        x = (1 - t) * points[0] + t * points[0]
-        y = (1 - t) * points[1] + t * points[1]
+        x = (1 - t) * x_points[r] + t * x_points[r+1]
+        y = (1 - t) * y_points[r] + t * y_points[r+1]
         draw(x, y)
 
+    r += 1
+    frame = 0
 
+close_canvas()
 
