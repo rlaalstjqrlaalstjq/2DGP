@@ -18,13 +18,13 @@ def draw(x , y):
     clear_canvas()
     kpu_ground.draw(KPU_WIDTH // 2, KPU_HEIGHT // 2)
 
-    if temp < x:
+    if temp <  x:
         character.clip_draw(frame * 100, 100, 100, 100, x, y)
         update_canvas()
         frame = (frame + 1) % 8
 
         delay(0.05)
-    elif temp > x:
+    elif temp >  x:
         character.clip_draw(frame * 100, 0, 100, 100, x, y)
         update_canvas()
         frame = (frame + 1) % 8
