@@ -9,8 +9,26 @@ character = load_image('animation_sheet.png')
 
 frame = 0
 temp = 0
-clear_canvas()
-kpu_ground.draw(KPU_WIDTH // 2, KPU_HEIGHT // 2)
 
-update_canvas()
-frame = (frame + 1) % 8
+
+def draw(x,y):
+    global frame
+    global temp
+
+    clear_canvas()
+    kpu_ground.draw(KPU_WIDTH // 2, KPU_HEIGHT // 2)
+
+    if temp < x:
+        character.clip_draw(frame * 100, 100, 100, 100, x, y)
+        update_canvas()
+        frame = (frame + 1) % 8
+
+        delay(0.07)
+    elif temp > x:
+        character.clip_draw(frame * 100, 0, 100, 100, x, y)
+        update_canvas()
+        frame = (frame + 1) % 8
+
+        delay(0.07)
+
+    temp = x
