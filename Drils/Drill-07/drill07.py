@@ -23,13 +23,13 @@ def draw(x,y):
         update_canvas()
         frame = (frame + 1) % 8
 
-        delay(0.07)
+        delay(0.05)
     elif temp > x:
         character.clip_draw(frame * 100, 0, 100, 100, x, y)
         update_canvas()
         frame = (frame + 1) % 8
 
-        delay(0.07)
+        delay(0.05)
 
     temp = x
 
