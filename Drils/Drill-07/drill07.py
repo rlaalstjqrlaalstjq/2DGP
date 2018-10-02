@@ -32,3 +32,14 @@ def draw(x,y):
         delay(0.07)
 
     temp = x
+
+
+size = 20
+points = [(random.randint(100,200)) for n in  range(size)]  #20개 랜덤값 생성
+
+
+while True:
+
+    pass
+
+
