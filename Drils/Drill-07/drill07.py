@@ -11,7 +11,7 @@ frame = 0
 temp = 0
 
 
-def draw(x,y):
+def draw(x , y):
     global frame
     global temp
 
@@ -38,6 +38,7 @@ size = 20
 x_points = [(random.randint(0,1000)) for n in  range(size)]  #20개 랜덤값 생성
 y_points = [(random.randint(0,1000)) for n in  range(size)]
 r=1
+
 while True:
     for i in range(0, 100 + 1, 2):
         t = i / 100
