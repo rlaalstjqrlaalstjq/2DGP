@@ -39,7 +39,11 @@ points = [(random.randint(100,200)) for n in  range(size)]  #20개 랜덤값 생
 
 
 while True:
+    for i in range(0, 100 + 1, 2):
+        t = i / 100
+        x = (1 - t) * points[0] + t * points[0]
+        y = (1 - t) * points[1] + t * points[1]
+        draw(x, y)
 
-    pass
 
 
