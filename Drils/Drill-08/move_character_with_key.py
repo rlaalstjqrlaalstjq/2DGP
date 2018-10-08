@@ -141,3 +141,4 @@ while True:
     frame = 0
 
 close_canvas()
+#최종완성
