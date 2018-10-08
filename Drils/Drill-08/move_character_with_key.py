@@ -43,7 +43,12 @@ y_p1 = [(random.randint(0, 1000)) for i in range(size)]
 while True:
     # draw p1-p2
     for i in range(0, 50, 2):
-        pass
+        t = i / 100
+        x = (2 * t ** 2 - 3 * t + 1) * x_p1[0] + (-4 * t ** 2 + 4 * t) * x_p1[1] + (2 * t ** 2 - t) * x_p1[2]
+        y = (2 * t ** 2 - 3 * t + 1) * y_p1[0] + (-4 * t ** 2 + 4 * t) * y_p1[1] + (2 * t ** 2 - t) * y_p1[2]
+        draw(x,y)
+
+    frame = 0
     # draw p2-p3
     for i in range(0, 100, 2):
         pass
