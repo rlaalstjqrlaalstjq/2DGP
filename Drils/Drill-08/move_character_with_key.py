@@ -131,6 +131,13 @@ while True:
     frame = 0
         # draw p10-p1
     for i in range(0, 100, 2):
-        pass
+        t = i / 100
+        x = ((-t ** 3 + 2 * t ** 2 - t) * x_p1[8] + (3 * t ** 3 - 5 * t ** 2 + 2) * x_p1[9] + (
+                -3 * t ** 3 + 4 * t ** 2 + t) * x_p1[0] + (t ** 3 - t ** 2) * x_p1[1]) / 2
+        y = ((-t ** 3 + 2 * t ** 2 - t) * y_p1[8] + (3 * t ** 3 - 5 * t ** 2 + 2) * y_p1[9] + (
+                -3 * t ** 3 + 4 * t ** 2 + t) * y_p1[0] + (t ** 3 - t ** 2) * y_p1[1]) / 2
+        draw(x, y)
+
+    frame = 0
 
 close_canvas()
