@@ -58,6 +58,8 @@ open_canvas()
 
 team = [Boy() for i in range(11)]
 grass = Grass()
+balls = [BallS() for i in range(random.randint(1,15))] # 작은공 랜덤 갯수 정해주기
+ballb = [BallS() for i in range(20-len(balls))]  # 20개중 작은공 갯수 빼서 큰공 갯수 정해주기
 
 running = True;
 
