@@ -37,6 +37,12 @@ class BallS:
     def draw_big(self):
             self.images.clip_draw(0, 0, 41, 41, self.x, self.y) #큰공 그려주기
 
+    def speed(self):  # 공이 밑으로 떨어지는 행위
+        if self.y > 40:
+            self.y = self.y - self.down
+        else:
+            self.y = 40
+
 
 def handle_events():
     global running
