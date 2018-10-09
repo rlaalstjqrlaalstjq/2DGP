@@ -75,6 +75,14 @@ while running:
     for boy in team:
         boy.draw()
 
+    for ball in balls:
+        ball.draw_small()
+        ball.speed()
+
+    for ball in ballb:
+        ball.draw_big()
+        ball.speed()
+
     update_canvas()
 
     delay(0.05)
