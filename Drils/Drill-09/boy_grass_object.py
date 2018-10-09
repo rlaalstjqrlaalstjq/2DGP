@@ -27,9 +27,15 @@ class Boy:
 class BallS:
     def __init__(self):
         self.x, self.y = random.randint(50,750) , 600
-        self.down = random.randint(2, 10)
-        self.image = load_image('ball21x21.png')
-        self.images = load_image('ball41x41.png')
+        self.down = random.randint(2, 10)  # 랜덤값으로 속도 정해주기
+        self.image = load_image('ball21x21.png')   # 작은공 이미지 로드
+        self.images = load_image('ball41x41.png') # 큰공 이미지 로드
+
+    def draw_small(self):
+            self.image.clip_draw(0, 0, 21, 21, self.x, self.y)  #작은공 그려주기
+
+    def draw_big(self):
+            self.images.clip_draw(0, 0, 41, 41, self.x, self.y) #큰공 그려주기
 
 
 def handle_events():
