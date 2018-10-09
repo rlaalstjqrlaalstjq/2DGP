@@ -76,12 +76,12 @@ while running:
         boy.draw()
 
     for ball in balls:
-        ball.draw_small()
-        ball.speed()
+        ball.draw_small() # 작은공 그려주기 실행
+        ball.speed()   # 작은공 밑으로 떨어지기 실행
 
     for ball in ballb:
-        ball.draw_big()
-        ball.speed()
+        ball.draw_big() # 큰공 그려주기 실행
+        ball.speed()    # 작은공 밑으로 떨어지기 실행
 
     update_canvas()
 
