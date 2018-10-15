@@ -2,66 +2,76 @@ from pico2d import *
 
 import math
 
-os.chdir('C:\\Users\김민섭\\Desktop\\2D 프로그래밍\\2018-2DGP\\Labs\\Lecture03')
+# os.chdir('C:\\Users\김민섭\\Desktop\\2D 프로그래밍\\2018-2DGP\\Labs\\Lecture03')
 
 open_canvas()
 
 grass = load_image('grass.png')
 character = load_image('character.png')
 
-x= 0
-y=0
-i=0
-angle=5
-a= (math.radians(angle))
+
+def make_rectangle():
+    def move_from_center_to_right():
+        x, y = 800 // 2, 90
+        while x < 800 - 25:
+            clear_canvas_now()
+            grass.draw_now(400, 30)
+            chracter.draw_now(x, y)
+            x += 2
+            delay(0.01)
+
+    def move_up():
+        x, y = 800 - 25, 90
+        while y < 600 - 50:
+            clear_canvas_now()
+            grass.draw_now(400, 30)
+            chracter.draw_now(x, y)
+            y += 2
+            delay(0.01)
+
+    def move_left():
+        x, y = 800 - 25, 550
+        while x > 0 + 25:
+            clear_canvas_now()
+            grass.draw_now(400, 30)
+            chracter.draw_now(x, y)
+            x -= 2
+            delay(0.01)
+
+    def move_from_center_to_left():
+        x, y = 0 + 25, 550
+        while y > 0 + 25:
+            clear_canvas_now()
+            grass.draw_now(400, 30)
+            chracter.draw_now(x, y)
+            y -= 2
+            delay(0.01)
+
+    def move_down():
+        pass
+
+    move_from_center_to_right()
+    move_up()
+    move_left()
+    move_from_center_to_left()
+    move_down()
+
+def make_circle():
+    cx,cy,r = 800 // 2,600 // 2,(600 - 180) // 2
+    degree = -90
+    while degree<270:
+        radian = math.radians(degree)
+        x = cx + r * math.cos(radian)
+        y = cy + r * math.sin(radian)
+        clear_canvas_now()
+        grass.draw_now(400, 30)
+        chracter.draw_now(x, y)
+        degree += 1
+        delay(0.01)
+
 
 while True:
-        while( x <800):
-                clear_canvas_now()
-                grass.draw_now(400,30)
-                character.draw_now(x,90)
-                x = x+4
-                delay(0.01)
-        while( y <570):
-                clear_canvas_now()
-                grass.draw_now(400,30)
-                character.draw_now(790,y+90)
-                y = y+4
-                delay(0.01)
-        while( x >0):
-                clear_canvas_now()
-                grass.draw_now(400,30)
-                character.draw_now(x,560)
-                x = x-4
-                delay(0.01)   
-        while( y > 0):
-                clear_canvas_now()
-                grass.draw_now(400,30)
-                character.draw_now(0,y+90)
-                y = y-4
-                delay(0.01)
-        while( x <400):
-                clear_canvas_now()
-                grass.draw_now(400,30)
-                character.draw_now(x,90)
-                x = x+4
-                delay(0.01)
-        for k in range(0,71):
-            clear_canvas_now()
-            grass.draw_now(400,30)
-            character.draw_now(x,y)
-            x= 400 +210*(math.cos(a*(120-k)))
-            y= 300 + 210*(math.sin(a*(120-k)))
-            
-            delay(0.04)
-    
-    
-    
+    #make_rectangle()
+    make_circle()
 
-        
 close_canvas()
-
-
-
-    
-
