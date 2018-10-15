@@ -47,7 +47,8 @@ def draw():
 
 
 def update():
-    pass
+    global frame
+    frame = (frame + 1) % 400
 
 def pause():
     pass
