@@ -93,6 +93,8 @@ class DashState:
     def enter(boy, event):
 
         boy.dir = boy.velocity
+        boy.dashtime = 70
+
 
     @staticmethod
     def exit(boy, event):
@@ -103,8 +105,12 @@ class DashState:
     def do(boy):
         boy.frame = (boy.frame + 1) % 8
         boy.timer -= 1
-        boy.x += boy.velocity*2
+        boy.dashtime -= 1
+        boy.x += boy.velocity*3
         boy.x = clamp(25, boy.x, 1600 - 25)
+        if boy.dashtime == 0:
+            boy.add_event(DASH_UP)
+
 
     @staticmethod
     def draw(boy):
@@ -144,7 +150,7 @@ next_state_table = {
     SleepState: {LEFT_DOWN: RunState, RIGHT_DOWN: RunState, LEFT_UP: RunState, RIGHT_UP: RunState
                  ,SPACE: IdleState, DASH_UP: IdleState, DASH_DOWN: IdleState},
     DashState:{DASH_UP: RunState, LEFT_UP: DashState, LEFT_DOWN: DashState, RIGHT_DOWN: DashState, RIGHT_UP: DashState,
-                DASH_DOWN:DashState, SPACE: DashState}
+                SPACE: DashState}
 
 }
 
